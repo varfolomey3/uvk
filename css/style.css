@@ -1,0 +1,537 @@
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: url('../fonts/Comfortaa-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;}
+
+p {font-family: "Comfortaa-Light";}
+
+a { text-decoration: none;
+ 	color: #061722;
+ 	 font-family: "Comfortaa-Light"; }
+
+li {font-family: "Comfortaa-Light";}
+
+body {background: #CCDDE8;}
+
+html {width: 100%;height: 1000px;}
+
+@media (min-width: 900px) { 
+	/*Главная*/
+		/*Шапка*/
+			.header {
+				width: 100%;
+				height: 70px;
+				background: #B7C8D3;}
+
+			.logo {
+				position: absolute;
+				display: block;
+				top:1.5%;
+				left: 2%;
+				width: 300px;
+				height: 50px;
+				float: left;}
+
+			.logo img {height: 40px;}
+
+			.ln {
+				position: absolute;
+				width: 165px;
+				height: 50px;
+				top: 1%;
+				left: 45%;
+				color: #008AC3;
+				font-family: "comfortaa-light"; }
+
+			.ln span {color: #08478C;}
+
+			.header_select {
+				width: 45%;
+				height: 70px;
+				float: right;}
+
+			.header_select ul {
+		  		position: absolute;
+		  		top: 4%;
+		  		left: 78%;
+		  		transform: translate(-50%, -50%);
+		 		margin: 0;
+		  		padding: 0;
+		  		display: flex;}
+
+			.header_select ul li {list-style: none;}
+
+			.header_select ul li a {
+		  		position: relative;
+		  		display: block;
+		  		margin: 0 10px;
+		  		padding: 5px 10px;
+		  		color: #061722;
+		  		font-size: 18px;
+		  		text-decoration: none;
+		  		text-transform: uppercase;
+		  		transition: 0.5s;
+				overflow: hidden;
+				font-family: comfortaa-light;}
+
+			.header_select ul li a::before {
+		  		content: '';
+		  		position: absolute;
+		  		top: calc(50% - 2px);
+		  		left: -100%;
+		  		width: 100%;
+		  		height: 4px;
+		  		background: #178FD6;
+		  		transition: 0.5s;}
+
+			.header_select ul li a:hover {color: #FFFCF6;}
+
+			.header_select ul li a:hover::before {
+				animation: animate .5s linear forwards;}
+
+			@keyframes animate {
+		  		0% {
+		  			top: calc(50% - 2px);
+		    		left: -100%;
+		    		height: 4px;
+		    		z-index: 1;}
+
+		  		50%{
+		  			top: calc(50% - 2px);
+		    		left: 0;
+		    		height: 4px;
+		    		z-index: 1;}
+
+				100%{
+					top: 0;
+				    left: 0;
+				    height: 100%;
+				    z-index: -1;}
+			}
+
+			.main_name {
+				width: 100%;
+				height: 880px;
+				background: url(../img/main.jpg)}
+
+			.company_name {
+				position: absolute;
+				display: block;
+				top: 35%;
+				left: 5%;}
+
+			.company_name p{
+				color: #FFFCF6;
+				font-size: 55px;}
+
+			.company_about {
+				position: absolute;
+				display: block;
+				top: 55%;
+				left: 5%;}
+
+			.company_about p {
+				color: #CCDDE8;
+				font-size: 35px;}
+
+			.button {
+				position: absolute;
+				display: block;
+				left: 14%;
+				top: 70%;}
+
+			.button a {
+		 		position: absolute;
+		  		top: 65%;
+		  		left: 18%;
+		  		transform: translate(-50%, -50%);
+		  		width: 220px;
+		  		height: 60px;
+		  		text-align: center;
+		  		line-height: 60px;
+		  		text-decoration: none;
+		  		text-transform: uppercase;
+		  		letter-spacing: 4px;
+			  	border: 3px solid #EDECE8;
+			  	font-size: 24px;
+			 	color: #EDECE8;
+			 	transition: 0.5s;
+			 	overflow: hidden;}
+
+			.button a:hover {color: #fff;}
+
+			.button a span {
+				  position: absolute;
+				  width: 100%;
+				  height: 100%;
+				  background: rgba(204,221,232, 0.5);
+				  transition: 0.5s;
+				  z-index: -1;}
+
+			.button a span:nth-child(1) {top: -100%;left: -100%;}
+			.button a:hover span:nth-child(1) {top: 0;left: 0;}
+			.button a span:nth-child(2) {bottom: -100%;left: -100%;}
+			.button a:hover span:nth-child(2) {bottom: 0;left: 0;}
+			.button a span:nth-child(3) {top: -100%;right: -100%;}
+			.button a:hover span:nth-child(3) {top: 0;right: 0;}
+			.button a span:nth-child(4) {bottom: -100%;right: -100%;}
+			.button a:hover span:nth-child(4) {bottom: 0;right: 0;}
+
+		/*Вкладки*/
+			#tabs,#tabs2,#tabs3,#tabs4 {
+			    width: 100%;
+				margin: 0 auto;
+				margin-bottom: 40px;
+				background: #CCDDE8;}
+
+			#tabs ul {
+				width: 100%;
+				height: 77px;}
+
+			#tabs li,#tabs2 li,#tabs3 li,#tabs4 li {
+				float: left;
+				margin: 0 0.04%;
+		   		width: 24.92%;}
+
+				#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a {
+				display: block;
+				padding: 20px 26px;
+				background: #4089C0;
+				margin: 0 auto;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+				color:#EDECE8;}
+
+			#tabs li a:hover,#tabs2 li a:hover,
+			#tabs3 li a:hover,#tabs4 li a:hover {background: #4089D9;}
+
+			#tabs_container {
+				padding: 200px 15px;
+				overflow: hidden;
+				position: relative;
+				background: #CCDDE8;}
+
+			#tabs_container div {margin-right: 40px;}
+
+			.transition {
+				-webkit-transition: all .3s ease-in-out;
+				-moz-transition: all .3s ease-in-out;
+				-o-transition: all .3s ease-in-out;
+				-ms-transition: all .3s ease-in-out;
+				transition: all .3s ease-in-out;
+				-webkit-transition-delay: .3s;
+				-moz-transition-delay: .3s;
+				-o-transition-delay: .3s;
+				-ms-transition-delay: .3s;
+				transition-delay: .3s;}
+
+			.make_transist {
+				-webkit-transition: all .3s ease-in-out;
+				-moz-transition: all .3s ease-in-out;
+				-o-transition: all .3s ease-in-out;
+				-ms-transition: all .3s ease-in-out;
+				transition: all .3s ease-in-out;}
+
+			.hidescale {
+				-webkit-transform: scale(0.9);
+				-moz-transform: scale(0.9);
+				-o-transform: scale(0.9);
+				-ms-transform: scale(0.9);
+				transform: scale(0.9);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				filter: alpha(opacity=0);
+				filter: alpha(opacity=0);
+				opacity: 0;}
+
+			.showscale {
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-o-transform: scale(1);
+				-ms-transform: scale(1);
+				transform: scale(1);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+				filter: alpha(opacity=100);
+				opacity: 1;
+				-webkit-transition-delay: .3s;
+				-moz-transition-delay: .3s;
+				-o-transition-delay: .3s;
+				-ms-transition-delay: .3s;
+				transition-delay: .3s;}
+
+			.tabulousclear {display: block;clear: both;}
+
+			.tabulous_active {
+				background: #2B4989 !important;
+				color: #EDECE8 !important;}
+			/*Ремонт грузовых вагонов*/
+				.m_s{padding-bottom: 10px;width: 600px;}
+
+				.m_s_1 {float: left;width: 600px;}
+
+				.ico_vag {height: 20px;padding-right: 5px;}
+				.s_p {
+				    float: left;
+				    height: 330px;
+				    position: absolute;
+				    top: 0%;
+				    left: 120%;}
+
+		/*Слайдер - slider_main.css*/
+
+		/*Футер*/
+			.footer{
+				width: 100%;
+				height: 105px;
+				background: #B7C8D3;
+				}
+			.footer p {
+				font-size: 12px;
+				padding: 15px;
+				color: #061722;
+				line-height: 15px;
+				font-family: comfortaa-light;	}
+
+	/*О компании*/
+		/*Шапка - 19стр*/
+
+		/*Слайдер - slider_about.css */
+
+		/*О компании*/	
+			.about_c {
+				width: 50%;
+				height: 427px;
+				float: left;}
+			.about_c p {
+				line-height: 22px;
+				font-family: comfortaa-light;
+				margin: 0 5%;}	
+			.block_about {
+				display: block;
+				width: 100%;
+				height: 590px;
+				background: #CCDDE8;}
+			.about_text {
+				width: 45%;
+				padding: 0 2.5%;
+				float: 	left;}
+			.about_text p {
+				line-height: 20px;
+				font-family: comfortaa-light;}	
+			.about_pict  {
+				width: 45%;
+				padding: 0 2.5%;
+				float: left;
+				height: 590px}
+			.about_pict img {width: 100%;}
+			
+		/*Лицензии*/
+				.license {
+					display: block;
+					width: 100%;
+					height: 342px;
+					background: #CCDDE8;
+				}
+				.license p {
+					font-size: 20px;
+					padding: 25px 45px;
+					font-family: comfortaa-light;
+				}		
+				.lic img {
+					width: 80%;
+				}
+				.lic {
+					display: block;
+					background: #CCDDE8;
+					border: 0px solid #fff;
+					float: left;
+					width: 16.66%;
+					padding: 20px 0;
+				}
+				.lic_f {
+				    opacity: 0;
+				    visibility: hidden;
+				    display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: flex;
+				    -webkit-box-align: center;
+				    -ms-flex-align: center;
+			        align-items: center;
+			        -webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				    justify-content: center;
+				    position: fixed;
+				    top: 20%;
+				    left: 0;
+				    width: 100%;
+				    height: 50%;
+				    -webkit-transition: 0.3s ease-in-out;
+				    transition: 0.3s ease-in-out;
+					}
+
+				.lic_f img {
+					height: 800px;
+				}
+				.lic:focus + .lic_f {
+		 			opacity: 1;
+					visibility: visible;
+				}
+	/*Контакты*/
+		/*Карта 2гис*/
+			p#mpopup {color: #fff;}
+			p#mname {padding:10px 5px;}
+			img#mimg {height: 30px;float: left;}
+			p#mtext {padding: 12px;}
+		/*Контакты*/	
+			.contacts {
+				height: 960px;
+				width: 100%;
+				background: #CCDDE8;}
+			.contacts_1 {
+				width: 95%;
+				height: 150px;
+				padding: 1.5% 2.5%;}
+			.photo {
+				float: left;
+				width: 21%;
+				height: 150px;}
+			.photo img {height: 100%;width: 200px;}
+			.name {
+				float: left;
+				width: 18%;
+				height: 68px;
+				padding: 41px 25px;}
+			.name p {font-size: 20px;line-height: 22px;}
+			.post {
+				float: left;
+				width: 30%;
+				height: 20px;
+				padding: 65px 25px;}
+			.post_l {
+				float: left;
+				width: 30%;
+				height: 40px;
+				padding: 55px 25px;}
+			.post_xl {
+				float: left;
+				width: 30%;
+				height: 80px;
+				padding: 35px 25px;}
+			.post p, .post_l p, .post_xl p {
+				text-align: center;
+				font-size: 20px;}
+
+			.nm {
+				float: left;
+				width: 15%;
+				text-align: center;
+				height: 20px;
+				padding: 65px 25px;}
+			.nm p {padding: 0 5px;}
+		/*Реквизиты*/	
+			.requisites {
+				width: 100%;
+				height: 400px;
+				background: #CCDDE8;
+			}
+			.reqv{
+				width: auto;
+				height: 20px;
+				padding: 0 2.5%;
+				font-size: 20px;
+				color: #08478C;
+			}
+			.req {
+				width: 45%;
+				height: 400px;
+				float: left;
+				padding: 2.5%
+			}
+
+			.req p {
+				line-height: 20px;
+				font-size: 14px;
+				padding: 3px 0;
+			}
+
+			.req span {
+				font-size: 16px;
+				color: #08478C;
+			}
+			.dwnl {
+
+				background: #008AC3;
+				border: 3px #08478C solid;
+
+				color: #08478C;
+				height: 55px;
+				width: 240px;
+			}
+
+			.dwnl p{
+				font-size: 20px;
+				margin: 15px 9px;
+				height: 10px;
+			}
+@media (min-width: 1600px) { 
+	.mobile_select {display: none;}
+	/*Главная*/
+		/*Шапка*/
+			.header_select ul li a {font-size: 21px;}
+			.main_name {background: url(../img/main_1.jpg);}
+			.company_name {top: 30%;}
+			.company_name p{font-size: 65px;}
+			.company_about {top: 50%;}
+			.company_about p {font-size: 40px;}
+			.button {left: 11%;top: 65%;}
+		/*Вкладки*/
+			#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a {
+				font-size: 18px;
+				line-height: 19px;}
+			#tabs_container {padding: 250px 15px;}
+			.m_s{font-size: 17px;}
+			.m_s_1 {font-size: 17px;line-height: 25px;}
+			.ico_vag {height: 25px;	padding: 5px;}
+			.s_p {
+			    float: left;
+			    height: 530px;
+			    position: absolute;
+			    top: 0%;
+			    left: 150%;}
+		/*Футер*/
+			.footer{height: 110px;}
+			.footer p {
+				font-size: 15px;
+				padding: 12px 15px;
+				line-height: 17px;}
+
+	/*О компании*/
+		.about_c {height: 628px;}
+		.about_c p, .about_text p {font-size: 20px;}		
+		/*Лицензии*/
+			.license {height: 490px;}
+			.license p {font-size: 23px;}		
+			.lic_f {top: 20%;height: 60%;}
+			.lic_f img {height: 950px;}
+
+	/*Контакты*/
+		.contacts {height: 1500px;}
+		.contacts_1 {height: 200px;padding: 2.5%;}
+		.photo {width: 25%;height: 200px;}
+		.photo img {width: 300px;}
+		.name {height: 77px;padding: 61.5px 1%;}
+		.name p {font-size: 25px;line-height: 26px;}
+		.post {padding: 90px 1%;}
+		.post_l {height: 50px;padding: 75px  1%;}
+		.post_xl {height: 50px;padding: 75px  1%}
+		.post p, .post_l p, .post_xl p {font-size: 25px;}
+		.nm {width: 18%;padding: 90px  1%;}
+		.nm p {font-size: 25px;}
+		/*Реквизиты*/
+			.requisites {height: 435px;}
+			.reqv{height: 20px;}
+			.req {height: 320px;}
+			.req p {line-height: 22px;font-size: 18px;}
+			.req span {font-size: 20px;}
+			.dwnl {margin: 10% 0 0 0;border: 4px #08478C solid;}
